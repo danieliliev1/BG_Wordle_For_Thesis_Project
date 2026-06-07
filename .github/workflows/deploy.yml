@@ -1,10 +1,10 @@
 name: CI/CD Deploy to AWS Lambda
 
-# Пайплайнът ще се задейства автоматично при всеки push към main бранча
+# Пайплайнът ще се задейства автоматично при всеки push към master бранча
 on:
     push:
         branches:
-            - main
+            - master
 
 jobs:
     deploy:
