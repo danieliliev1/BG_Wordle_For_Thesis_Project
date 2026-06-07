@@ -44,3 +44,16 @@ docs
 # Misc
 *.todo
 todo.*
+
+# Игнорирай локалните драйвери на Terraform (Огромните файлове)
+.terraform/
+terraform/.terraform/
+
+# Игнорирай състоянието на Terraform (важно за сигурността!)
+*.tfstate
+*.tfstate.*
+
+# Игнорирай скритите променливи
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json

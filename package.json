@@ -1,7 +1,7 @@
 {
-  "name": "bg-wordle",
+  "name": "bg-wordle-lambda-project",
   "version": "1.0.0",
-  "description": "Play BG Wordle with unlimited 5-letter words! Can you guess the hidden word in 6 tries?",
+  "description": "This is a fork of stambolievv's BG Wordle repo, which is based on Wordle, a puzzle game about guessing the correct 5 letter word. Unlike the original Wordle, which has a one game limit per day, this version does not have such a limit. Also, I will be using it for my thesis project and paper to automate the deployment of cloud infrastructure.",
   "main": "index.html",
   "private": true,
   "type": "module",
