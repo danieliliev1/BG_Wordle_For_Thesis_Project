@@ -6,6 +6,10 @@ on:
         branches:
             - master
 
+# Това се е тук, за да се избегне съобщението след изпълнението на workflow-а в GitHub Actions
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
     deploy:
         name: Build and Deploy Project
