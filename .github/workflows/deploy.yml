@@ -44,6 +44,7 @@ jobs:
             uses: hashicorp/setup-terraform@v3
             # Изпълнение на Terraform Init и Terraform Apply
           - name: Terraform Init and Apply
+            working-directory: ./terraform
             run: |
                 terraform init
                 terraform apply -auto-approve
