@@ -45,9 +45,3 @@ jobs:
                 aws lambda update-function-code \
                 --function-name bg-wordle-backend \
                 --image-uri 090565619636.dkr.ecr.eu-central-1.amazonaws.com/bg-wordle-lambda-project:latest
-            # Изпълнение на Terraform Init и Terraform Apply
-          - name: Terraform Init and Apply
-            working-directory: ./terraform
-            run: |
-                terraform init
-                terraform apply -auto-approve
