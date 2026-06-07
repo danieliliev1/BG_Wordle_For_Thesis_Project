@@ -39,9 +39,12 @@ jobs:
             run: |
                 docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
                 docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-            # Инсталиране на Terraform
-          - name: Setup Terraform
-            uses: hashicorp/setup-terraform@v3
+            #  Обновява се AWS Lambda с функция и имидж URI
+          - name: Update AWS Lambda Function Code
+            run: |
+                aws lambda update-function-code \
+                --function-name bg-wordle-backend \
+                --image-uri 090565619636.dkr.ecr.eu-central-1.amazonaws.com/bg-wordle-lambda-project:latest
             # Изпълнение на Terraform Init и Terraform Apply
           - name: Terraform Init and Apply
             working-directory: ./terraform
